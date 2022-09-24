@@ -21,21 +21,8 @@ function generateColor() {
 }
 
 
-// Отрисовываем шахматные поля
-function draw_chess_field(context, marginLeft, margitTop, widthEl, heightEl) {
-    for (let i = 0; i < 8; i++) {
-        for (let j = 0; j < 8; j++) {
-            if ((i + j) % 2 === 0) context.fillStyle = "#000000"
-            else context.fillStyle = "#7c7c7c"
-            context.fillRect(widthEl * i + marginLeft, heightEl * j + margitTop, widthEl, heightEl)
-        }
-    }
-}
-
-//
 function drawColorBlock() {
-    const color = generateColor()
-    context.fillStyle = color
+    context.fillStyle = generateColor()
     context.fillRect(curr_x, curr_y, step, step)
     curr_x += step
     if (curr_x > width - step) {
@@ -49,12 +36,4 @@ timerId = setInterval(drawColorBlock, 10)
 
 // через 15 секунд останавливаем
 setTimeout(() => { clearInterval(timerId)}, 15000)
-
-
-// Рисуем две шахматные доски
-draw_chess_field(context, 20, height_block + step, step, step)
-draw_chess_field(context, 200, height_block + step, step, step)
-
-
-
 
