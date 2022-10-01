@@ -58,7 +58,7 @@ function BresenhamMethod(x1, y1) {
     }
 }
 
-function drawArrow() {
+function drawLine() {
     context.fillStyle = "#a110fa"
     let x1 = x0 + Math.cos(angle * Math.PI) * size
     let y1 = y0 + Math.sin(angle * Math.PI) * size
@@ -71,4 +71,4 @@ function drawArrow() {
 }
 
 
-setInterval(drawArrow, 1000)
+setInterval(drawLine, 1000)
