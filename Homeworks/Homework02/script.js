@@ -41,8 +41,6 @@ function filter() {
             B.sort((x, y) => x - y);
             S.sort((x, y) => x - y);
 
-            console.log(R)
-
             let m = Math.floor(R.length / 2);
             img_data_filter.data[(j * width + i) * 4] = R[m]
             img_data_filter.data[(j * width + i) * 4 + 1] = G[m]
