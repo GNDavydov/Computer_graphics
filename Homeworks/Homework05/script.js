@@ -145,7 +145,7 @@ function sobel_filter() {
             for (let x = 0; x < 3; ++x) {
                 img_data_filter.data[(j * width + i) * 4 + x] = g
             }
-            img_data_filter.data[(j * width + i) * 4 + 3] = 255;
+            img_data_filter.data[(j * width + i) * 4 + 3] = 255
         }
     }
     cnx_filtered.putImageData(img_data_filter, 0, 0, 0, 0, width, height)

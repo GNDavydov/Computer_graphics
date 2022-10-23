@@ -5,10 +5,10 @@ const context = canvas.getContext("2d")
 const width = canvas.width
 const height = canvas.height
 
-let radius = width / 3;
+let radius = width / 3
 
-let center_x = width / 2;
-let center_y = height / 2;
+let center_x = width / 2
+let center_y = height / 2
 
 function drawPixel(x, y, color) {
     context.fillStyle = color
